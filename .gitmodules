@@ -1,0 +1,6 @@
+[submodule "er_sdk"]
+	path = er_sdk
+	url = https://github.com/exositeready/er_sdk.git
+[submodule "er_plat_microchip_pic32mzecsk"]
+	path = er_plat_microchip_pic32mzecsk
+	url = https://github.com/exositeready/er_plat_microchip_pic32mzecsk.git
