@@ -1,0 +1,1080 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="62">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <logicalFolder name="f2" displayName="app" projectFiles="true">
+        <logicalFolder name="f1" displayName="system_config" projectFiles="true">
+          <logicalFolder name="f1" displayName="pic32mz_ec_sk" projectFiles="true">
+            <logicalFolder name="f1" displayName="framework" projectFiles="true">
+              <logicalFolder name="f1" displayName="net" projectFiles="true">
+                <logicalFolder name="f1" displayName="pres" projectFiles="true">
+                  <itemPath>../src/system_config/pic32mz_ec_sk/framework/net/pres/net_pres_enc_glue.h</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+              <logicalFolder name="f2" displayName="system" projectFiles="true">
+                <logicalFolder name="f1" displayName="clk" projectFiles="true">
+                  <itemPath>../src/system_config/pic32mz_ec_sk/framework/system/clk/sys_clk_static.h</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+            </logicalFolder>
+            <itemPath>../src/system_config/pic32mz_ec_sk/FreeRTOSConfig.h</itemPath>
+            <itemPath>../src/system_config/pic32mz_ec_sk/system_config.h</itemPath>
+            <itemPath>../src/system_config/pic32mz_ec_sk/system_definitions.h</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <itemPath>../src/app.h</itemPath>
+        <itemPath>../src/display_ctrl.h</itemPath>
+        <itemPath>../src/sensor.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f3" displayName="bsp" projectFiles="true">
+        <logicalFolder name="f1" displayName="pic32mz_ef_sk" projectFiles="true">
+          <itemPath>../../../../bsp/pic32mz_ef_sk/bsp_config.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="er_plat_pic32mz_ef_starter_kit"
+                     displayName="er_plat_pic32mz_ef_starter_kit"
+                     projectFiles="true">
+        <logicalFolder name="display" displayName="display" projectFiles="true">
+          <itemPath>../../er_plat_pic32mz_ef_starter_kit/display/Oled_M.h</itemPath>
+          <itemPath>../../er_plat_pic32mz_ef_starter_kit/display/SSD1306.h</itemPath>
+          <itemPath>../../er_plat_pic32mz_ef_starter_kit/display/Oled_font.h</itemPath>
+        </logicalFolder>
+        <itemPath>../../er_plat_pic32mz_ef_starter_kit/platform_demo.h</itemPath>
+        <itemPath>../../er_plat_pic32mz_ef_starter_kit/platform_nvm.h</itemPath>
+        <itemPath>../../er_plat_pic32mz_ef_starter_kit/platform_display.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f1" displayName="framework" projectFiles="true">
+        <logicalFolder name="f1" displayName="crypto" projectFiles="true">
+          <logicalFolder name="f1" displayName="src" projectFiles="true">
+            <logicalFolder name="f1" displayName="zlib-1.2.7" projectFiles="true">
+              <itemPath>../../../../framework/crypto/src/zlib-1.2.7/crc32.h</itemPath>
+              <itemPath>../../../../framework/crypto/src/zlib-1.2.7/deflate.h</itemPath>
+              <itemPath>../../../../framework/crypto/src/zlib-1.2.7/inffast.h</itemPath>
+              <itemPath>../../../../framework/crypto/src/zlib-1.2.7/inffixed.h</itemPath>
+              <itemPath>../../../../framework/crypto/src/zlib-1.2.7/inflate.h</itemPath>
+              <itemPath>../../../../framework/crypto/src/zlib-1.2.7/inftrees.h</itemPath>
+              <itemPath>../../../../framework/crypto/src/zlib-1.2.7/trees.h</itemPath>
+              <itemPath>../../../../framework/crypto/src/zlib-1.2.7/zconf.h</itemPath>
+              <itemPath>../../../../framework/crypto/src/zlib-1.2.7/zlib.h</itemPath>
+              <itemPath>../../../../framework/crypto/src/zlib-1.2.7/zutil.h</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="f3" displayName="driver" projectFiles="true">
+          <logicalFolder name="f1" displayName="ethmac" projectFiles="true">
+            <itemPath>../../../../framework/driver/ethmac/drv_ethmac.h</itemPath>
+            <itemPath>../../../../framework/driver/ethmac/src/drv_ethmac_local.h</itemPath>
+            <itemPath>../../../../framework/driver/ethmac/src/dynamic/_eth_dcpt_lists.h</itemPath>
+            <itemPath>../../../../framework/driver/ethmac/src/dynamic/drv_ethmac_lib.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f2" displayName="ethphy" projectFiles="true">
+            <itemPath>../../../../framework/driver/ethphy/drv_ethphy.h</itemPath>
+            <itemPath>../../../../framework/driver/ethphy/src/drv_ethphy_local.h</itemPath>
+            <itemPath>../../../../framework/driver/ethphy/src/dynamic/drv_extphy_regs.h</itemPath>
+            <itemPath>../../../../framework/driver/ethphy/src/dynamic/drv_extphy_smsc8740.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f3" displayName="i2c" projectFiles="true">
+            <itemPath>../../../../framework/driver/i2c/drv_i2c_bb_a.h</itemPath>
+            <itemPath>../../../../framework/driver/i2c/drv_i2c_bb.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f4" displayName="nvm" projectFiles="true">
+            <itemPath>../../../../framework/driver/nvm/drv_nvm.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f5" displayName="spi" projectFiles="true">
+            <logicalFolder name="f1" displayName="private" projectFiles="true">
+              <logicalFolder name="f1" displayName="dynamic" projectFiles="true">
+                <itemPath>../../../../framework/driver/spi/src/dynamic/drv_spi_internal.h</itemPath>
+              </logicalFolder>
+              <itemPath>../../../../framework/driver/spi/src/drv_spi_sys_queue.h</itemPath>
+              <itemPath>../../../../framework/driver/spi/src/drv_spi_sys_queue_local_fifo.h</itemPath>
+            </logicalFolder>
+            <itemPath>../../../../framework/driver/spi/drv_spi.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f6" displayName="tmr" projectFiles="true">
+            <itemPath>../../../../framework/driver/tmr/drv_tmr.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f7" displayName="usart" projectFiles="true">
+            <itemPath>../../../../framework/driver/usart/drv_usart.h</itemPath>
+          </logicalFolder>
+          <itemPath>../../../../framework/driver/driver.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f4" displayName="net" projectFiles="true">
+          <logicalFolder name="f1" displayName="pres" projectFiles="true">
+            <logicalFolder name="f1" displayName="priv" projectFiles="true">
+              <itemPath>../../../../framework/net/pres/src/net_pres_local.h</itemPath>
+            </logicalFolder>
+            <itemPath>../../../../framework/net/pres/net_pres.h</itemPath>
+            <itemPath>../../../../framework/net/pres/net_pres_certstore.h</itemPath>
+            <itemPath>../../../../framework/net/pres/net_pres_encryptionproviderapi.h</itemPath>
+            <itemPath>../../../../framework/net/pres/net_pres_socketapi.h</itemPath>
+            <itemPath>../../../../framework/net/pres/net_pres_transportapi.h</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="f2" displayName="system" projectFiles="true">
+          <logicalFolder name="f1" displayName="command" projectFiles="true">
+            <itemPath>../../../../framework/system/command/sys_command.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f2" displayName="common" projectFiles="true">
+            <itemPath>../../../../framework/system/common/sys_common.h</itemPath>
+            <itemPath>../../../../framework/system/common/sys_module.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f4" displayName="console" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../framework/system/console/src/sys_console_local.h</itemPath>
+              <itemPath>../../../../framework/system/console/src/sys_console_uart.h</itemPath>
+            </logicalFolder>
+            <itemPath>../../../../framework/system/console/sys_console.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f3" displayName="debug" projectFiles="true">
+            <itemPath>../../../../framework/system/debug/sys_debug.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f5" displayName="devcon" projectFiles="true">
+            <itemPath>../../../../framework/system/devcon/sys_devcon.h</itemPath>
+            <itemPath>../../../../framework/system/devcon/src/sys_devcon_cache.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f6" displayName="int" projectFiles="true">
+            <itemPath>../../../../framework/system/int/sys_int.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f7" displayName="ports" projectFiles="true">
+            <itemPath>../../../../framework/system/ports/sys_ports.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f8" displayName="random" projectFiles="true">
+            <itemPath>../../../../framework/system/random/sys_random.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f9" displayName="reset" projectFiles="true">
+            <itemPath>../../../../framework/system/reset/sys_reset.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f10" displayName="tmr" projectFiles="true">
+            <itemPath>../../../../framework/system/tmr/sys_tmr.h</itemPath>
+          </logicalFolder>
+          <itemPath>../../../../framework/system/system.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f5" displayName="tcpip" projectFiles="true">
+          <logicalFolder name="f2" displayName="common" projectFiles="true">
+            <itemPath>../../../../framework/tcpip/src/common/helpers.h</itemPath>
+            <itemPath>../../../../framework/tcpip/src/common/lfsr.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f1" displayName="stack" projectFiles="true">
+            <itemPath>../../../../framework/tcpip/src/tcp_private.h</itemPath>
+            <itemPath>../../../../framework/tcpip/src/tcp_manager.h</itemPath>
+            <itemPath>../../../../framework/tcpip/src/udp_private.h</itemPath>
+            <itemPath>../../../../framework/tcpip/src/udp_manager.h</itemPath>
+            <itemPath>../../../../framework/tcpip/src/tcpip_heap_alloc.h</itemPath>
+            <itemPath>../../../../framework/tcpip/src/arp_manager.h</itemPath>
+            <itemPath>../../../../framework/tcpip/src/arp_private.h</itemPath>
+            <itemPath>../../../../framework/tcpip/src/dhcp_manager.h</itemPath>
+            <itemPath>../../../../framework/tcpip/src/dhcp_private.h</itemPath>
+            <itemPath>../../../../framework/tcpip/src/dns_manager.h</itemPath>
+            <itemPath>../../../../framework/tcpip/src/dns_private.h</itemPath>
+            <itemPath>../../../../framework/tcpip/src/nbns_manager.h</itemPath>
+            <itemPath>../../../../framework/tcpip/src/tcpip_announce_manager.h</itemPath>
+            <itemPath>../../../../framework/tcpip/src/tcpip_commands_manager.h</itemPath>
+            <itemPath>../../../../framework/tcpip/src/hash_fnv.h</itemPath>
+            <itemPath>../../../../framework/tcpip/src/link_list.h</itemPath>
+            <itemPath>../../../../framework/tcpip/src/oahash.h</itemPath>
+            <itemPath>../../../../framework/tcpip/src/tcpip_helpers_private.h</itemPath>
+            <itemPath>../../../../framework/tcpip/src/tcpip_manager_control.h</itemPath>
+            <itemPath>../../../../framework/tcpip/src/tcpip_module_manager.h</itemPath>
+            <itemPath>../../../../framework/tcpip/src/tcpip_notify.h</itemPath>
+            <itemPath>../../../../framework/tcpip/src/tcpip_packet.h</itemPath>
+            <itemPath>../../../../framework/tcpip/src/tcpip_private.h</itemPath>
+            <itemPath>../../../../framework/tcpip/src/tcpip_types.h</itemPath>
+            <itemPath>../../../../framework/tcpip/src/ipv4_manager.h</itemPath>
+            <itemPath>../../../../framework/tcpip/src/ipv4_private.h</itemPath>
+          </logicalFolder>
+          <itemPath>../../../../framework/tcpip/tcp.h</itemPath>
+          <itemPath>../../../../framework/tcpip/udp.h</itemPath>
+          <itemPath>../../../../framework/tcpip/tcpip_heap.h</itemPath>
+          <itemPath>../../../../framework/tcpip/arp.h</itemPath>
+          <itemPath>../../../../framework/tcpip/berkeley_api.h</itemPath>
+          <itemPath>../../../../framework/tcpip/tls.h</itemPath>
+          <itemPath>../../../../framework/tcpip/dhcp.h</itemPath>
+          <itemPath>../../../../framework/tcpip/dns.h</itemPath>
+          <itemPath>../../../../framework/tcpip/nbns.h</itemPath>
+          <itemPath>../../../../framework/tcpip/tcpip_commands.h</itemPath>
+          <itemPath>../../../../framework/tcpip/tcpip_helpers.h</itemPath>
+          <itemPath>../../../../framework/tcpip/tcpip_manager.h</itemPath>
+          <itemPath>../../../../framework/tcpip/tcpip.h</itemPath>
+          <itemPath>../../../../framework/tcpip/tcpip_common_ports.h</itemPath>
+          <itemPath>../../../../framework/tcpip/ipv4.h</itemPath>
+          <itemPath>../../../../framework/tcpip/tcpip_mac.h</itemPath>
+          <itemPath>../../../../framework/tcpip/tcpip_mac_object.h</itemPath>
+          <itemPath>../../../../framework/tcpip/tcpip_ethernet.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="f4" displayName="FreeRTOS" projectFiles="true">
+        <logicalFolder name="f1" displayName="portable" projectFiles="true">
+          <logicalFolder name="f1" displayName="MPLAB" projectFiles="true">
+            <logicalFolder name="f1" displayName="PIC32MZ" projectFiles="true">
+              <itemPath>../../../../third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ/ISR_Support.h</itemPath>
+              <itemPath>../../../../third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ/portmacro.h</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+        <itemPath>../../../../third_party/rtos/FreeRTOS/Source/include/croutine.h</itemPath>
+        <itemPath>../../../../third_party/rtos/FreeRTOS/Source/include/event_groups.h</itemPath>
+        <itemPath>../../../../third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h</itemPath>
+        <itemPath>../../../../third_party/rtos/FreeRTOS/Source/include/list.h</itemPath>
+        <itemPath>../../../../third_party/rtos/FreeRTOS/Source/include/mpu_wrappers.h</itemPath>
+        <itemPath>../../../../third_party/rtos/FreeRTOS/Source/include/portable.h</itemPath>
+        <itemPath>../../../../third_party/rtos/FreeRTOS/Source/include/projdefs.h</itemPath>
+        <itemPath>../../../../third_party/rtos/FreeRTOS/Source/include/queue.h</itemPath>
+        <itemPath>../../../../third_party/rtos/FreeRTOS/Source/include/semphr.h</itemPath>
+        <itemPath>../../../../third_party/rtos/FreeRTOS/Source/include/StackMacros.h</itemPath>
+        <itemPath>../../../../third_party/rtos/FreeRTOS/Source/include/task.h</itemPath>
+        <itemPath>../../../../third_party/rtos/FreeRTOS/Source/include/timers.h</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="LinkerScript"
+                   displayName="Linker Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="f2" displayName="app" projectFiles="true">
+        <logicalFolder name="f1" displayName="system_config" projectFiles="true">
+          <logicalFolder name="f1" displayName="pic32mz_ec_sk" projectFiles="true">
+            <logicalFolder name="f1" displayName="framework" projectFiles="true">
+              <logicalFolder name="f1" displayName="driver" projectFiles="true">
+                <logicalFolder name="f1" displayName="spi" projectFiles="true">
+                  <logicalFolder name="f1" displayName="dynamic" projectFiles="true">
+                    <itemPath>../src/system_config/pic32mz_ec_sk/framework/driver/spi/dynamic/drv_spi_tasks.c</itemPath>
+                    <itemPath>../src/system_config/pic32mz_ec_sk/framework/driver/spi/dynamic/drv_spi_api.c</itemPath>
+                    <itemPath>../src/system_config/pic32mz_ec_sk/framework/driver/spi/dynamic/drv_spi_master_ebm_tasks.c</itemPath>
+                  </logicalFolder>
+                </logicalFolder>
+              </logicalFolder>
+              <logicalFolder name="f2" displayName="net" projectFiles="true">
+                <logicalFolder name="f1" displayName="pres" projectFiles="true">
+                  <itemPath>../src/system_config/pic32mz_ec_sk/framework/net/pres/net_pres_enc_glue.c</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+              <logicalFolder name="f3" displayName="system" projectFiles="true">
+                <logicalFolder name="f1" displayName="clk" projectFiles="true">
+                  <logicalFolder name="f1" displayName="src" projectFiles="true">
+                    <itemPath>../src/system_config/pic32mz_ec_sk/framework/system/clk/src/sys_clk_static.c</itemPath>
+                  </logicalFolder>
+                </logicalFolder>
+                <logicalFolder name="f2" displayName="ports" projectFiles="true">
+                  <logicalFolder name="f1" displayName="src" projectFiles="true">
+                    <itemPath>../src/system_config/pic32mz_ec_sk/framework/system/ports/src/sys_ports_static.c</itemPath>
+                  </logicalFolder>
+                </logicalFolder>
+              </logicalFolder>
+            </logicalFolder>
+            <itemPath>../src/system_config/pic32mz_ec_sk/system_init.c</itemPath>
+            <itemPath>../src/system_config/pic32mz_ec_sk/system_interrupt.c</itemPath>
+            <itemPath>../src/system_config/pic32mz_ec_sk/system_exceptions.c</itemPath>
+            <itemPath>../src/system_config/pic32mz_ec_sk/system_tasks.c</itemPath>
+            <itemPath>../src/system_config/pic32mz_ec_sk/system_interrupt_a.S</itemPath>
+            <itemPath>../src/system_config/pic32mz_ec_sk/rtos_hooks.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <itemPath>../src/app.c</itemPath>
+        <itemPath>../src/main.c</itemPath>
+        <itemPath>../src/display_ctrl.c</itemPath>
+        <itemPath>../src/sensor.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f3" displayName="bsp" projectFiles="true">
+        <logicalFolder name="f1" displayName="pic32mz_ef_sk" projectFiles="true">
+          <itemPath>../../../../bsp/pic32mz_ef_sk/bsp_sys_init.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="er_plat_pic32mz_ef_starter_kit"
+                     displayName="er_plat_pic32mz_ef_starter_kit"
+                     projectFiles="true">
+        <logicalFolder name="display" displayName="display" projectFiles="true">
+          <itemPath>../../er_plat_pic32mz_ef_starter_kit/display/OLED_B_SPI.c</itemPath>
+        </logicalFolder>
+        <itemPath>../../er_plat_pic32mz_ef_starter_kit/platform_nvm.c</itemPath>
+        <itemPath>../../er_plat_pic32mz_ef_starter_kit/platform_demo.c</itemPath>
+        <itemPath>../../er_plat_pic32mz_ef_starter_kit/platform_freertos.c</itemPath>
+        <itemPath>../../er_plat_pic32mz_ef_starter_kit/platform_display.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="er_sdk" displayName="er_sdk" projectFiles="true">
+        <logicalFolder name="include" displayName="include" projectFiles="true">
+          <itemPath>../../er_sdk/include/configurator_api.h</itemPath>
+          <itemPath>../../er_sdk/include/exosite_api.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="porting" displayName="porting" projectFiles="true">
+          <logicalFolder name="net" displayName="net" projectFiles="true">
+            <logicalFolder name="microchip_harmony"
+                           displayName="microchip_harmony"
+                           projectFiles="true">
+              <itemPath>../../er_sdk/porting/net/microchip_harmony/net_if_harmony_tcp.c</itemPath>
+              <itemPath>../../er_sdk/porting/net/microchip_harmony/harmony_port.c</itemPath>
+              <itemPath>../../er_sdk/porting/net/microchip_harmony/net_if_harmony_udp.c</itemPath>
+            </logicalFolder>
+            <itemPath>../../er_sdk/porting/net/ns_list.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="system" displayName="system" projectFiles="true">
+            <logicalFolder name="FreeRTOS" displayName="FreeRTOS" projectFiles="true">
+              <itemPath>../../er_sdk/porting/system/FreeRTOS/thread.c</itemPath>
+              <itemPath>../../er_sdk/porting/system/FreeRTOS/platform_freertos.h</itemPath>
+              <itemPath>../../er_sdk/porting/system/FreeRTOS/mutex.c</itemPath>
+              <itemPath>../../er_sdk/porting/system/FreeRTOS/system.c</itemPath>
+            </logicalFolder>
+            <itemPath>../../er_sdk/porting/system/os_list.h</itemPath>
+          </logicalFolder>
+          <itemPath>../../er_sdk/porting/thread_port.h</itemPath>
+          <itemPath>../../er_sdk/porting/config_port.h</itemPath>
+          <itemPath>../../er_sdk/porting/net_port.h</itemPath>
+          <itemPath>../../er_sdk/porting/system_port.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="src" displayName="src" projectFiles="true">
+          <logicalFolder name="include" displayName="include" projectFiles="true">
+            <logicalFolder name="config" displayName="config" projectFiles="true">
+              <itemPath>../../er_sdk/src/include/config/config.h</itemPath>
+              <itemPath>../../er_sdk/src/include/config/config_cyassl.h</itemPath>
+              <itemPath>../../er_sdk/src/include/config/config_mbedtls.h</itemPath>
+              <itemPath>../../er_sdk/src/include/config/security_list.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="lib" displayName="lib" projectFiles="true">
+              <itemPath>../../er_sdk/src/include/lib/mem_check.h</itemPath>
+              <itemPath>../../er_sdk/src/include/lib/use_string_heap.h</itemPath>
+              <itemPath>../../er_sdk/src/include/lib/string_class.h</itemPath>
+              <itemPath>../../er_sdk/src/include/lib/string_class_priv.h</itemPath>
+              <itemPath>../../er_sdk/src/include/lib/heap_manager.h</itemPath>
+              <itemPath>../../er_sdk/src/include/lib/common_defines.h</itemPath>
+              <itemPath>../../er_sdk/src/include/lib/ts_cbuffer.h</itemPath>
+              <itemPath>../../er_sdk/src/include/lib/dictionary.h</itemPath>
+              <itemPath>../../er_sdk/src/include/lib/fault_injection.h</itemPath>
+              <itemPath>../../er_sdk/src/include/lib/cbuffer.h</itemPath>
+              <itemPath>../../er_sdk/src/include/lib/heap_types.h</itemPath>
+              <itemPath>../../er_sdk/src/include/lib/queue.h</itemPath>
+              <itemPath>../../er_sdk/src/include/lib/use_ssl_heap.h</itemPath>
+              <itemPath>../../er_sdk/src/include/lib/pclb.h</itemPath>
+              <itemPath>../../er_sdk/src/include/lib/error.h</itemPath>
+              <itemPath>../../er_sdk/src/include/lib/sf_malloc.h</itemPath>
+              <itemPath>../../er_sdk/src/include/lib/utils.h</itemPath>
+              <itemPath>../../er_sdk/src/include/lib/packet_buffer.h</itemPath>
+              <itemPath>../../er_sdk/src/include/lib/type.h</itemPath>
+              <itemPath>../../er_sdk/src/include/lib/e_list.h</itemPath>
+              <itemPath>../../er_sdk/src/include/lib/tcp_buffer.h</itemPath>
+              <itemPath>../../er_sdk/src/include/lib/dlmalloc.h</itemPath>
+              <itemPath>../../er_sdk/src/include/lib/pmatch.h</itemPath>
+              <itemPath>../../er_sdk/src/include/lib/debug.h</itemPath>
+              <itemPath>../../er_sdk/src/include/lib/concurrent_queue.h</itemPath>
+            </logicalFolder>
+            <itemPath>../../er_sdk/src/include/rtc_if.h</itemPath>
+            <itemPath>../../er_sdk/src/include/protocol_client_sm.h</itemPath>
+            <itemPath>../../er_sdk/src/include/net_dev_factory.h</itemPath>
+            <itemPath>../../er_sdk/src/include/net_dev_test.h</itemPath>
+            <itemPath>../../er_sdk/src/include/exosite_api_internal.h</itemPath>
+            <itemPath>../../er_sdk/src/include/ssl_client.h</itemPath>
+            <itemPath>../../er_sdk/src/include/system_utils.h</itemPath>
+            <itemPath>../../er_sdk/src/include/client_config.h</itemPath>
+            <itemPath>../../er_sdk/src/include/protocol_client_common.h</itemPath>
+            <itemPath>../../er_sdk/src/include/protocol_client.h</itemPath>
+            <itemPath>../../er_sdk/src/include/sdk_config.h</itemPath>
+            <itemPath>../../er_sdk/src/include/server_api.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="lib" displayName="lib" projectFiles="true">
+            <itemPath>../../er_sdk/src/lib/heap_space_internal.h</itemPath>
+            <itemPath>../../er_sdk/src/lib/heap_manager.c</itemPath>
+            <itemPath>../../er_sdk/src/lib/pmatch.c</itemPath>
+            <itemPath>../../er_sdk/src/lib/hs_mem.c</itemPath>
+            <itemPath>../../er_sdk/src/lib/pclb.c</itemPath>
+            <itemPath>../../er_sdk/src/lib/ts_cbuffer.c</itemPath>
+            <itemPath>../../er_sdk/src/lib/tcp_buffer.c</itemPath>
+            <itemPath>../../er_sdk/src/lib/tdictionary.c</itemPath>
+            <itemPath>../../er_sdk/src/lib/mem_check.c</itemPath>
+            <itemPath>../../er_sdk/src/lib/hs_mem.h</itemPath>
+            <itemPath>../../er_sdk/src/lib/debug.c</itemPath>
+            <itemPath>../../er_sdk/src/lib/string_class.c</itemPath>
+            <itemPath>../../er_sdk/src/lib/packet_buffer.c</itemPath>
+            <itemPath>../../er_sdk/src/lib/cbuffer.c</itemPath>
+            <itemPath>../../er_sdk/src/lib/concurrent_queue.c</itemPath>
+            <itemPath>../../er_sdk/src/lib/heap_tracker.c</itemPath>
+            <itemPath>../../er_sdk/src/lib/heap_tracker.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="protocol_clients"
+                         displayName="protocol_clients"
+                         projectFiles="true">
+            <itemPath>../../er_sdk/src/protocol_clients/mbedtls_client.c</itemPath>
+            <itemPath>../../er_sdk/src/protocol_clients/http_client.c</itemPath>
+            <itemPath>../../er_sdk/src/protocol_clients/net_dev_test.c</itemPath>
+            <itemPath>../../er_sdk/src/protocol_clients/http_parser.c</itemPath>
+            <itemPath>../../er_sdk/src/protocol_clients/picocoap_client.c</itemPath>
+            <itemPath>../../er_sdk/src/protocol_clients/libcoap_client.c</itemPath>
+            <itemPath>../../er_sdk/src/protocol_clients/cyassl_client.c</itemPath>
+            <itemPath>../../er_sdk/src/protocol_clients/ca-cert.h</itemPath>
+            <itemPath>../../er_sdk/src/protocol_clients/http_parser.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="resources" displayName="resources" projectFiles="true">
+            <itemPath>../../er_sdk/src/resources/configurator_server_res.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="server_api" displayName="server_api" projectFiles="true">
+            <itemPath>../../er_sdk/src/server_api/exosite_libcoap_api.c</itemPath>
+            <itemPath>../../er_sdk/src/server_api/exosite_picocoap_api.c</itemPath>
+            <itemPath>../../er_sdk/src/server_api/exosite_http_api.c</itemPath>
+          </logicalFolder>
+          <itemPath>../../er_sdk/src/net_dev_factory.c</itemPath>
+          <itemPath>../../er_sdk/src/sdk_init.c</itemPath>
+          <itemPath>../../er_sdk/src/configurator_server.c</itemPath>
+          <itemPath>../../er_sdk/src/client_config.c</itemPath>
+          <itemPath>../../er_sdk/src/exosite_api.c</itemPath>
+          <itemPath>../../er_sdk/src/system_utils.c</itemPath>
+          <itemPath>../../er_sdk/src/rtc.c</itemPath>
+          <itemPath>../../er_sdk/src/protocol_client_sm.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="third_party" displayName="third_party" projectFiles="true">
+          <logicalFolder name="f1" displayName="cyassl" projectFiles="true">
+            <itemPath>../../er_sdk/third_party/cyassl/ctaocrypt/src/aes.c</itemPath>
+            <itemPath>../../er_sdk/third_party/cyassl/ctaocrypt/src/arc4.c</itemPath>
+            <itemPath>../../er_sdk/third_party/cyassl/ctaocrypt/src/asn.c</itemPath>
+            <itemPath>../../er_sdk/third_party/cyassl/ctaocrypt/src/coding.c</itemPath>
+            <itemPath>../../er_sdk/third_party/cyassl/ctaocrypt/src/dh.c</itemPath>
+            <itemPath>../../er_sdk/third_party/cyassl/ctaocrypt/src/ecc.c</itemPath>
+            <itemPath>../../er_sdk/third_party/cyassl/ctaocrypt/src/error.c</itemPath>
+            <itemPath>../../er_sdk/third_party/cyassl/ctaocrypt/src/hmac.c</itemPath>
+            <itemPath>../../er_sdk/third_party/cyassl/ctaocrypt/src/integer.c</itemPath>
+            <itemPath>../../er_sdk/third_party/cyassl/src/internal.c</itemPath>
+            <itemPath>../../er_sdk/third_party/cyassl/src/io.c</itemPath>
+            <itemPath>../../er_sdk/third_party/cyassl/src/keys.c</itemPath>
+            <itemPath>../../er_sdk/third_party/cyassl/ctaocrypt/src/logging.c</itemPath>
+            <itemPath>../../er_sdk/third_party/cyassl/ctaocrypt/src/md5.c</itemPath>
+            <itemPath>../../er_sdk/third_party/cyassl/ctaocrypt/src/memory.c</itemPath>
+            <itemPath>../../er_sdk/third_party/cyassl/ctaocrypt/src/pwdbased.c</itemPath>
+            <itemPath>../../er_sdk/third_party/cyassl/ctaocrypt/src/random.c</itemPath>
+            <itemPath>../../er_sdk/third_party/cyassl/ctaocrypt/src/rsa.c</itemPath>
+            <itemPath>../../er_sdk/third_party/cyassl/ctaocrypt/src/sha.c</itemPath>
+            <itemPath>../../er_sdk/third_party/cyassl/ctaocrypt/src/sha256.c</itemPath>
+            <itemPath>../../er_sdk/third_party/cyassl/src/ssl.c</itemPath>
+            <itemPath>../../er_sdk/third_party/cyassl/ctaocrypt/src/tfm.c</itemPath>
+            <itemPath>../../er_sdk/third_party/cyassl/src/tls.c</itemPath>
+            <itemPath>../../er_sdk/third_party/cyassl/ctaocrypt/src/wc_port.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="lib" displayName="lib" projectFiles="true">
+            <itemPath>../../er_sdk/third_party/lib/dlmalloc.c</itemPath>
+            <itemPath>../../er_sdk/third_party/lib/queue.c</itemPath>
+            <itemPath>../../er_sdk/third_party/lib/cyassl_adapt.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="f1" displayName="framework" projectFiles="true">
+        <logicalFolder name="f1" displayName="crypto" projectFiles="true">
+          <logicalFolder name="f1" displayName="src" projectFiles="true">
+            <logicalFolder name="f1" displayName="zlib-1.2.7" projectFiles="true">
+              <itemPath>../../../../framework/crypto/src/zlib-1.2.7/adler32.c</itemPath>
+              <itemPath>../../../../framework/crypto/src/zlib-1.2.7/compress.c</itemPath>
+              <itemPath>../../../../framework/crypto/src/zlib-1.2.7/crc32.c</itemPath>
+              <itemPath>../../../../framework/crypto/src/zlib-1.2.7/deflate.c</itemPath>
+              <itemPath>../../../../framework/crypto/src/zlib-1.2.7/infback.c</itemPath>
+              <itemPath>../../../../framework/crypto/src/zlib-1.2.7/inffast.c</itemPath>
+              <itemPath>../../../../framework/crypto/src/zlib-1.2.7/inflate.c</itemPath>
+              <itemPath>../../../../framework/crypto/src/zlib-1.2.7/inftrees.c</itemPath>
+              <itemPath>../../../../framework/crypto/src/zlib-1.2.7/trees.c</itemPath>
+              <itemPath>../../../../framework/crypto/src/zlib-1.2.7/uncompr.c</itemPath>
+              <itemPath>../../../../framework/crypto/src/zlib-1.2.7/zutil.c</itemPath>
+            </logicalFolder>
+            <itemPath>../../../../framework/crypto/src/ssl-dummy.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="f3" displayName="driver" projectFiles="true">
+          <logicalFolder name="f1" displayName="ethmac" projectFiles="true">
+            <itemPath>../../../../framework/driver/ethmac/src/dynamic/drv_ethmac.c</itemPath>
+            <itemPath>../../../../framework/driver/ethmac/src/dynamic/drv_ethmac_lib.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f2" displayName="ethphy" projectFiles="true">
+            <itemPath>../../../../framework/driver/ethphy/src/dynamic/drv_ethphy.c</itemPath>
+            <itemPath>../../../../framework/driver/ethphy/src/dynamic/drv_extphy_smsc8740.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f3" displayName="i2c" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <logicalFolder name="f1" displayName="dynamic" projectFiles="true">
+                <itemPath>../../../../framework/driver/i2c/src/dynamic/drv_i2c_bb_a.c</itemPath>
+                <itemPath>../../../../framework/driver/i2c/src/dynamic/drv_i2c_bb.c</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f4" displayName="nvm" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <logicalFolder name="f1" displayName="dynamic" projectFiles="true">
+                <itemPath>../../../../framework/driver/nvm/src/dynamic/drv_nvm.c</itemPath>
+                <itemPath>../../../../framework/driver/nvm/src/dynamic/drv_nvm_erasewrite.c</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f5" displayName="spi" projectFiles="true">
+            <logicalFolder name="f1" displayName="dynamic" projectFiles="true">
+              <itemPath>../../../../framework/driver/spi/src/dynamic/drv_spi.c</itemPath>
+            </logicalFolder>
+            <itemPath>../../../../framework/driver/spi/src/drv_spi_sys_queue_fifo.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f6" displayName="tmr" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <logicalFolder name="f1" displayName="dynamic" projectFiles="true">
+                <itemPath>../../../../framework/driver/tmr/src/dynamic/drv_tmr.c</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f7" displayName="usart" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <logicalFolder name="f1" displayName="dynamic" projectFiles="true">
+                <itemPath>../../../../framework/driver/usart/src/dynamic/drv_usart.c</itemPath>
+                <itemPath>../../../../framework/driver/usart/src/dynamic/drv_usart_buffer_queue.c</itemPath>
+                <itemPath>../../../../framework/driver/usart/src/dynamic/drv_usart_read_write.c</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="f4" displayName="net" projectFiles="true">
+          <logicalFolder name="f1" displayName="pres" projectFiles="true">
+            <itemPath>../../../../framework/net/pres/src/net_pres.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="f5" displayName="osal" projectFiles="true">
+          <logicalFolder name="f1" displayName="src" projectFiles="true">
+            <itemPath>../../../../framework/osal/src/osal_freertos.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="f2" displayName="system" projectFiles="true">
+          <logicalFolder name="f1" displayName="command" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../framework/system/command/src/sys_command.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f3" displayName="console" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../framework/system/console/src/sys_console.c</itemPath>
+              <itemPath>../../../../framework/system/console/src/sys_console_uart.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f2" displayName="debug" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../framework/system/debug/src/sys_debug.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f4" displayName="devcon" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../framework/system/devcon/src/sys_devcon.c</itemPath>
+              <itemPath>../../../../framework/system/devcon/src/sys_devcon_pic32mz.c</itemPath>
+              <itemPath>../../../../framework/system/devcon/src/sys_devcon_cache_pic32mz.S</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f5" displayName="int" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../framework/system/int/src/sys_int_pic32.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f6" displayName="ports" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../framework/system/ports/src/sys_ports.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f7" displayName="random" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../framework/system/random/src/sys_random.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f8" displayName="reset" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../framework/system/reset/src/sys_reset.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f9" displayName="tmr" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../framework/system/tmr/src/sys_tmr.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="f6" displayName="tcpip" projectFiles="true">
+          <logicalFolder name="f2" displayName="common" projectFiles="true">
+            <itemPath>../../../../framework/tcpip/src/common/helpers.c</itemPath>
+            <itemPath>../../../../framework/tcpip/src/common/lfsr.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f1" displayName="stack" projectFiles="true">
+            <itemPath>../../../../framework/tcpip/src/tcp.c</itemPath>
+            <itemPath>../../../../framework/tcpip/src/udp.c</itemPath>
+            <itemPath>../../../../framework/tcpip/src/tcpip_heap_alloc.c</itemPath>
+            <itemPath>../../../../framework/tcpip/src/tcpip_heap_internal.c</itemPath>
+            <itemPath>../../../../framework/tcpip/src/arp.c</itemPath>
+            <itemPath>../../../../framework/tcpip/src/berkeley_api.c</itemPath>
+            <itemPath>../../../../framework/tcpip/src/dhcp.c</itemPath>
+            <itemPath>../../../../framework/tcpip/src/dns.c</itemPath>
+            <itemPath>../../../../framework/tcpip/src/nbns.c</itemPath>
+            <itemPath>../../../../framework/tcpip/src/tcpip_announce.c</itemPath>
+            <itemPath>../../../../framework/tcpip/src/tcpip_commands.c</itemPath>
+            <itemPath>../../../../framework/tcpip/src/hash_fnv.c</itemPath>
+            <itemPath>../../../../framework/tcpip/src/oahash.c</itemPath>
+            <itemPath>../../../../framework/tcpip/src/tcpip_helpers.c</itemPath>
+            <itemPath>../../../../framework/tcpip/src/tcpip_helper_c32.S</itemPath>
+            <itemPath>../../../../framework/tcpip/src/tcpip_manager.c</itemPath>
+            <itemPath>../../../../framework/tcpip/src/tcpip_notify.c</itemPath>
+            <itemPath>../../../../framework/tcpip/src/tcpip_packet.c</itemPath>
+            <itemPath>../../../../framework/tcpip/src/ipv4.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="f4" displayName="FreeRTOS" projectFiles="true">
+        <logicalFolder name="f1" displayName="portable" projectFiles="true">
+          <logicalFolder name="f1" displayName="MemMang" projectFiles="true">
+            <itemPath>../../../../third_party/rtos/FreeRTOS/Source/portable/MemMang/heap_2.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f2" displayName="MPLAB" projectFiles="true">
+            <logicalFolder name="f1" displayName="PIC32MZ" projectFiles="true">
+              <itemPath>../../../../third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ/port.c</itemPath>
+              <itemPath>../../../../third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ/port_asm.S</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+        <itemPath>../../../../third_party/rtos/FreeRTOS/Source/croutine.c</itemPath>
+        <itemPath>../../../../third_party/rtos/FreeRTOS/Source/list.c</itemPath>
+        <itemPath>../../../../third_party/rtos/FreeRTOS/Source/queue.c</itemPath>
+        <itemPath>../../../../third_party/rtos/FreeRTOS/Source/tasks.c</itemPath>
+        <itemPath>../../../../third_party/rtos/FreeRTOS/Source/timers.c</itemPath>
+        <itemPath>../../../../third_party/rtos/FreeRTOS/Source/event_groups.c</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>../src</Elem>
+    <Elem>../..</Elem>
+    <Elem>../src/pic32mz_ec_sk</Elem>
+    <Elem>../src/system_config/pic32mz_ec_sk</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="pic32mz_ec_sk" type="2">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <targetDevice>PIC32MZ2048EFH144</targetDevice>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
+        <platformTool>PKOBSKDEPlatformTool</platformTool>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>1.40</languageToolchainVersion>
+        <platform>4</platform>
+      </toolsSet>
+      <compileType>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibFileItem>../../../../bin/framework/peripheral/PIC32MZ2048EFH144_peripherals.a</linkerLibFileItem>
+          </linkerLibItems>
+        </linkerTool>
+        <archiverTool>
+        </archiverTool>
+        <loading>
+          <useAlternateLoadableFile>false</useAlternateLoadableFile>
+          <parseOnProdLoad>false</parseOnProdLoad>
+          <alternateLoadableFile></alternateLoadableFile>
+        </loading>
+      </compileType>
+      <makeCustomizationType>
+        <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
+        <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
+        <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
+        <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
+        <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
+      </makeCustomizationType>
+      <item path="../../../../framework/crypto/src/ssl-dummy.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="../../../../framework/system/debug/src/sys_debug.c"
+            ex="true"
+            overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
+      <item path="../../../../framework/system/debug/sys_debug.h"
+            ex="true"
+            overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
+      <item path="../../er_sdk/include/configurator_api.h"
+            ex="true"
+            overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
+      <item path="../../er_sdk/include/exosite_api.h" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
+      <item path="../../er_sdk/src/configurator_server.c"
+            ex="true"
+            overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
+      <item path="../../er_sdk/src/include/config/config_cyassl.h"
+            ex="false"
+            overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
+      <item path="../../er_sdk/src/protocol_clients/ca-cert.h"
+            ex="true"
+            overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
+      <item path="../../er_sdk/src/protocol_clients/cyassl_client.c"
+            ex="false"
+            overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
+      <item path="../../er_sdk/src/protocol_clients/http_parser.h"
+            ex="true"
+            overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
+      <item path="../../er_sdk/src/protocol_clients/libcoap_client.c"
+            ex="true"
+            overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
+      <item path="../../er_sdk/src/protocol_clients/mbedtls_client.c"
+            ex="true"
+            overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
+      <item path="../../er_sdk/src/protocol_clients/picocoap_client.c"
+            ex="true"
+            overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
+      <item path="../../er_sdk/src/resources/configurator_server_res.c"
+            ex="true"
+            overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
+      <item path="../../er_sdk/src/server_api/exosite_libcoap_api.c"
+            ex="true"
+            overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
+      <item path="../../er_sdk/src/server_api/exosite_picocoap_api.c"
+            ex="true"
+            overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
+      <item path="../../er_sdk/third_party/lib/cyassl_adapt.c"
+            ex="false"
+            overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
+      <C32>
+        <property key="additional-warnings" value="false"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/pic32mz_ec_sk;../../../../framework;../src/system_config/pic32mz_ec_sk/framework;../../er_sdk/include;../../er_sdk/src/include;../../er_sdk/src/include/config;../../er_sdk/porting/system/FreeRTOS;../../er_sdk;../../er_plat_pic32mz_ef_starter_kit;../../er_sdk/third_party/cyassl;../src/system_config/pic32mz_ec_sk;../../../../bsp/pic32mz_ef_sk;../../../../third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../../../../third_party/rtos/FreeRTOS/Source/include"/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="true"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros"
+                  value="DEBUG_EASDK;COMPILE_TIME_DEBUG_LEVEL=DEBUG_DEBUG;CONFIG_NETWORK_STACK=cfg_harmony;CONFIG_OS=cfg_freertos;CONFIG_SECURITY=cfg_cyassl;CONFIG_HAS_CONFIGURATOR_SERVER=0;HAVE_CONFIG_H"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="support-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+        <appendMe value="-G0"/>
+      </C32>
+      <C32-AR>
+        <property key="additional-options-chop-files" value="false"/>
+      </C32-AR>
+      <C32-AS>
+        <property key="assembler-symbols" value=""/>
+        <property key="enable-symbols" value="true"/>
+        <property key="exclude-floating-point-library" value="false"/>
+        <property key="expand-macros" value="false"/>
+        <property key="extra-include-directories-for-assembler" value=""/>
+        <property key="extra-include-directories-for-preprocessor"
+                  value="../../../../third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../../../../third_party/rtos/FreeRTOS/Source/include;../src/system_config/pic32mz_ec_sk"/>
+        <property key="false-conditionals" value="false"/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="keep-locals" value="false"/>
+        <property key="list-assembly" value="false"/>
+        <property key="list-source" value="false"/>
+        <property key="list-symbols" value="false"/>
+        <property key="oXC32asm-list-to-file" value="false"/>
+        <property key="omit-debug-dirs" value="false"/>
+        <property key="omit-forms" value="false"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="warning-level" value=""/>
+      </C32-AS>
+      <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
+        <property key="enable-check-sections" value="false"/>
+        <property key="exclude-floating-point-library" value="false"/>
+        <property key="exclude-standard-libraries" value="false"/>
+        <property key="extra-lib-directories" value=""/>
+        <property key="fill-flash-options-addr" value=""/>
+        <property key="fill-flash-options-const" value=""/>
+        <property key="fill-flash-options-how" value="0"/>
+        <property key="fill-flash-options-inc-const" value="1"/>
+        <property key="fill-flash-options-increment" value=""/>
+        <property key="fill-flash-options-seq" value=""/>
+        <property key="fill-flash-options-what" value="0"/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="heap-size" value="131072"/>
+        <property key="input-libraries" value=""/>
+        <property key="linker-symbols" value=""/>
+        <property key="map-file" value="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"/>
+        <property key="no-startup-files" value="false"/>
+        <property key="oXC32ld-extra-opts" value=""/>
+        <property key="optimization-level" value=""/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="remove-unused-sections" value="true"/>
+        <property key="report-memory-usage" value="true"/>
+        <property key="stack-size" value=""/>
+        <property key="symbol-stripping" value=""/>
+        <property key="trace-symbols" value=""/>
+        <property key="warn-section-align" value="false"/>
+      </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="true"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
+      <C32Global>
+        <property key="common-include-directories" value=""/>
+        <property key="gp-relative-option" value=""/>
+        <property key="legacy-libc" value="false"/>
+        <property key="relaxed-math" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="wpo-lto" value="false"/>
+      </C32Global>
+      <PKOBSKDEPlatformTool>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
+        <property key="memories.configurationmemory" value="true"/>
+        <property key="memories.dataflash" value="true"/>
+        <property key="memories.eeprom" value="true"/>
+        <property key="memories.id" value="true"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="memories.programmemory.end" value="0x1d1fffff"/>
+        <property key="memories.programmemory.start" value="0x1d000000"/>
+        <property key="memories.userotp" value="true"/>
+        <property key="programoptions.donoteraseauxmem" value="false"/>
+        <property key="programoptions.eraseb4program" value="true"/>
+        <property key="programoptions.preservedataflash" value="false"/>
+        <property key="programoptions.preserveeeprom" value="false"/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.preserveprogramrange.end" value="0x1d0007ff"/>
+        <property key="programoptions.preserveprogramrange.start" value="0x1d000000"/>
+        <property key="programoptions.usehighvoltageonmclr" value="false"/>
+        <property key="programoptions.uselvpprogramming" value="true"/>
+      </PKOBSKDEPlatformTool>
+    </conf>
+  </confs>
+</configurationDescriptor>
