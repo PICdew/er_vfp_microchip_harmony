@@ -362,7 +362,7 @@ void APP_Tasks ( void )
 
             /** Update "humidity" data source */
             sensor_val = getHumidity();
-            sprintf(str, "%d%%", sensor_val);
+            sprintf(str, "%d", sensor_val);
             SYS_CONSOLE_PRINT("Humidity: %s\r\n", str);
             exosite_write(exo, "humidity", str, on_write);
 
