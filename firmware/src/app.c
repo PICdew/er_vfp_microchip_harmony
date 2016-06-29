@@ -61,7 +61,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "platform_demo.h"
 #include "app.h"
 #include <platform_display.h>
-#include "../../er_plat_pic32mz_ef_starter_kit/platform_display.h"
+#include "../../er_plat_microchip_pic32mzecsk/platform_display.h"
 
 // *****************************************************************************
 // *****************************************************************************

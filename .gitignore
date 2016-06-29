@@ -1,6 +1,6 @@
-/firmware/exositeready_pic32mz.X/build/
-/firmware/exositeready_pic32mz.X/dist/
-/firmware/exositeready_pic32mz.X/nbproject/private/
-/firmware/exositeready_pic32mz.X/nbproject/*.mk
-/firmware/exositeready_pic32mz.X/nbproject/Makefile-genesis.properties
-/firmware/exositeready_pic32mz.X/nbproject/Package-pic32mz_ec_sk.bash
+/firmware/er_vfp_microchip_harmony.X/build/
+/firmware/er_vfp_microchip_harmony.X/dist/
+/firmware/er_vfp_microchip_harmony.X/nbproject/private/
+/firmware/er_vfp_microchip_harmony.X/nbproject/*.mk
+/firmware/er_vfp_microchip_harmony.X/nbproject/Makefile-genesis.properties
+/firmware/er_vfp_microchip_harmony.X/nbproject/Package-pic32mz_ec_sk.bash
