@@ -275,8 +275,6 @@
         </logicalFolder>
         <itemPath>../src/app.c</itemPath>
         <itemPath>../src/main.c</itemPath>
-        <itemPath>../src/display_ctrl.c</itemPath>
-        <itemPath>../src/sensor.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f3" displayName="bsp" projectFiles="true">
         <logicalFolder name="f1" displayName="pic32mz_ef_sk" projectFiles="true">
@@ -286,13 +284,9 @@
       <logicalFolder name="er_plat_microchip_pic32mzecsk"
                      displayName="er_plat_microchip_pic32mzecsk"
                      projectFiles="true">
-        <logicalFolder name="display" displayName="display" projectFiles="true">
-          <itemPath>../../er_plat_microchip_pic32mzecsk/display/OLED_B_SPI.c</itemPath>
-        </logicalFolder>
         <itemPath>../../er_plat_microchip_pic32mzecsk/platform_nvm.c</itemPath>
         <itemPath>../../er_plat_microchip_pic32mzecsk/platform_demo.c</itemPath>
         <itemPath>../../er_plat_microchip_pic32mzecsk/platform_freertos.c</itemPath>
-        <itemPath>../../er_plat_microchip_pic32mzecsk/platform_display.c</itemPath>
       </logicalFolder>
       <logicalFolder name="er_sdk" displayName="er_sdk" projectFiles="true">
         <logicalFolder name="include" displayName="include" projectFiles="true">
