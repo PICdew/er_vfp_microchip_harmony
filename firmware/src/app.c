@@ -121,12 +121,20 @@ int gCounter;
  */
 static void on_read(int status, const char *alias, const char *value)
 {
+    int val;
     SYS_CONSOLE_PRINT("Read \"%s\": %s\r\n", alias, (status == ERR_SUCCESS) ? value : "failed");
-
-    if(!strcmp("leds", alias))
+    
+    if(!strcmp("leds", alias)) {
+        val = atoi(value);
+        BSP_LEDStateSet(BSP_LED_1, (val & 1) ? BSP_LED_STATE_ON : BSP_LED_STATE_OFF);
+        BSP_LEDStateSet(BSP_LED_2, (val & 2) ? BSP_LED_STATE_ON : BSP_LED_STATE_OFF);
+        BSP_LEDStateSet(BSP_LED_3, (val & 4) ? BSP_LED_STATE_ON : BSP_LED_STATE_OFF);
         appData.leds_initialized = (status == ERR_SUCCESS) ? INITIALIZED : NOT_INITIALIZED;
-    if(!strcmp("count", alias))
-        appData.counter_initialized = (status == ERR_SUCCESS) ? INITIALIZED : NOT_INITIALIZED;;
+    }
+    if(!strcmp("count", alias)) {
+        gCounter = atoi(value);
+        appData.counter_initialized = (status == ERR_SUCCESS) ? INITIALIZED : NOT_INITIALIZED;
+    }
 }
 
 /**
@@ -152,11 +160,15 @@ static void on_write(int status, const char *alias)
  */
 static void on_change(int status, const char *alias, const char *value)
 {
+    int val = atoi(value);
     ASSERT(!strcmp("leds", alias));
     
     if (status == ERR_SUCCESS) {
         appData.leds_initialized = INITIALIZED;
         printf("Value changed on server \"%s\" to %s\n", alias, value);
+        BSP_LEDStateSet(BSP_LED_1, (val & 1) ? BSP_LED_STATE_ON : BSP_LED_STATE_OFF);
+        BSP_LEDStateSet(BSP_LED_2, (val & 2) ? BSP_LED_STATE_ON : BSP_LED_STATE_OFF);
+        BSP_LEDStateSet(BSP_LED_3, (val & 4) ? BSP_LED_STATE_ON : BSP_LED_STATE_OFF);
     }
 }
 
@@ -318,7 +330,7 @@ void APP_Tasks ( void )
 
         case APP_CREATE_SUBSCRIPTIONS:
 
-            if(exosite_subscribe(exo, "display", 0, on_change) == ERR_SUCCESS) {
+            if(exosite_subscribe(exo, "leds", 0, on_change) == ERR_SUCCESS) {
                 appData.leds_initialized = IN_PROGRESS;
                 exosite_read(exo, "leds", on_read);
                 appData.state = APP_APPLICATION;
@@ -338,7 +350,7 @@ void APP_Tasks ( void )
                     
             /** Update "count" data source */
             countDiff = get_and_clear_press_counter();
-            if(countDiff) {
+            if((appData.counter_initialized == INITIALIZED) && countDiff) {
                 gCounter += countDiff;
                 sprintf(str, "%d", gCounter);
                 SYS_CONSOLE_PRINT("Counter: %s\r\n", str);
