@@ -147,10 +147,6 @@
         <Path>Source Files/framework/tcpip/stack</Path>
       </File>
       <File>
-        <Name>bsp_config.h</Name>
-        <Path>Header Files/bsp/pic32mz_ef_sk</Path>
-      </File>
-      <File>
         <Name>drv_ethphy.c</Name>
         <Path>Source Files/framework/driver/ethphy</Path>
       </File>
@@ -419,10 +415,6 @@
         <Path>Source Files/framework/driver/spi</Path>
       </File>
       <File>
-        <Name>bsp_sys_init.c</Name>
-        <Path>Source Files/bsp/pic32mz_ef_sk</Path>
-      </File>
-      <File>
         <Name>drv_tmr.c</Name>
         <Path>Source Files/framework/driver/tmr/src/dynamic</Path>
       </File>
@@ -641,6 +633,10 @@
         <Path>Source Files/app</Path>
       </Template>
       <Template>
+        <Name>switch_control.h</Name>
+        <Path>Header Files/app</Path>
+      </Template>
+      <Template>
         <Name>system_exceptions.c</Name>
         <Path>Source Files/app/system_config/pic32mz_ec_sk</Path>
         <Checksum>C111969CA43D6CEA1E9E33A6164E7AE0</Checksum>
@@ -663,7 +659,7 @@
       <Template>
         <Name>sys_ports_static.c</Name>
         <Path>Source Files/app/system_config/pic32mz_ec_sk/framework/system/ports/src</Path>
-        <Checksum>823854364FB1932E48A70573C406F427</Checksum>
+        <Checksum>053261AA872CB63C8027976C3747FEE1</Checksum>
       </Template>
       <Template>
         <Name>app.c</Name>
@@ -672,7 +668,7 @@
       <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/pic32mz_ec_sk</Path>
-        <Checksum>D8CB478F7B066F76E6F9D4A3159D43F1</Checksum>
+        <Checksum>45047D4869C6F4F6D31888D7165860B8</Checksum>
       </Template>
       <Template>
         <Name>net_pres_enc_glue.h</Name>
@@ -682,7 +678,7 @@
       <Template>
         <Name>system_interrupt.c</Name>
         <Path>Source Files/app/system_config/pic32mz_ec_sk</Path>
-        <Checksum>A40BD5A568480E82306644FB8ECEF5CE</Checksum>
+        <Checksum>8BD0BE11D707BFC6003246F959B96913</Checksum>
       </Template>
       <Template>
         <Name>sys_clk_static.h</Name>
@@ -697,12 +693,12 @@
       <Template>
         <Name>system_init.c</Name>
         <Path>Source Files/app/system_config/pic32mz_ec_sk</Path>
-        <Checksum>0A960579619F20FEF1B4342B49342940</Checksum>
+        <Checksum>0CF6026436C140B1146945C0A1515ADF</Checksum>
       </Template>
       <Template>
         <Name>system_definitions.h</Name>
         <Path>Header Files/app/system_config/pic32mz_ec_sk</Path>
-        <Checksum>E08BFEAD5A11E86DE2485580E8E0C854</Checksum>
+        <Checksum>E094EC174911D516AB49BB125563D05F</Checksum>
       </Template>
       <Template>
         <Name>app.h</Name>
@@ -719,6 +715,10 @@
         <Checksum>F299EB5298C761844925061277D5E36E</Checksum>
       </Template>
       <Template>
+        <Name>switch_control.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
         <Name>rtos_hooks.c</Name>
         <Path>Source Files/app/system_config/pic32mz_ec_sk</Path>
         <Checksum>FA52743264536E5207D2ADBE57B48D05</Checksum>
@@ -731,7 +731,7 @@
       <Template>
         <Name>system_tasks.c</Name>
         <Path>Source Files/app/system_config/pic32mz_ec_sk</Path>
-        <Checksum>69C74808B531E3608F126A5ED41B820F</Checksum>
+        <Checksum>BFE44265050D2D913E78D578F86DF1F6</Checksum>
       </Template>
     </Templates>
     <CompilerItems>
@@ -741,7 +741,6 @@
         <Include value="../src/system_config/pic32mz_ec_sk"/>
       </C32-AS>
       <C32>
-        <Include value="../../../../bsp/pic32mz_ef_sk"/>
         <Include value="../../../../third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ"/>
         <Include value="../../../../third_party/rtos/FreeRTOS/Source/include"/>
         <Include value="../src/system_config/pic32mz_ec_sk"/>

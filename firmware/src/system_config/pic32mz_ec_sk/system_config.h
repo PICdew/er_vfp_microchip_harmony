@@ -57,7 +57,6 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 /*  This section Includes other configuration headers necessary to completely
     define this configuration.
 */
-#include "bsp_config.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -105,21 +104,13 @@ extern "C" {
 #define SYS_PORT_A_CNPD         0x0
 #define SYS_PORT_A_CNEN         0x0
 
-#define SYS_PORT_B_ANSEL        0xfc9
-#define SYS_PORT_B_TRIS         0xffc9
+#define SYS_PORT_B_ANSEL        0x3fe9
+#define SYS_PORT_B_TRIS         0xffe9
 #define SYS_PORT_B_LAT          0x0
 #define SYS_PORT_B_ODC          0x0
-#define SYS_PORT_B_CNPU         0x3000
+#define SYS_PORT_B_CNPU         0x0
 #define SYS_PORT_B_CNPD         0x0
 #define SYS_PORT_B_CNEN         0x0
-
-#define SYS_PORT_C_ANSEL        0xe01e
-#define SYS_PORT_C_TRIS         0xf01e
-#define SYS_PORT_C_LAT          0x0
-#define SYS_PORT_C_ODC          0x0
-#define SYS_PORT_C_CNPU         0x0
-#define SYS_PORT_C_CNPD         0x0
-#define SYS_PORT_C_CNEN         0x0
 
 #define SYS_PORT_D_ANSEL        0xc000
 #define SYS_PORT_D_TRIS         0xfefe
@@ -145,8 +136,8 @@ extern "C" {
 #define SYS_PORT_G_CNPD         0x0
 #define SYS_PORT_G_CNEN         0x0
 
-#define SYS_PORT_H_ANSEL        0x0
-#define SYS_PORT_H_TRIS         0xffb0
+#define SYS_PORT_H_ANSEL        0x3
+#define SYS_PORT_H_TRIS         0xffb7
 #define SYS_PORT_H_LAT          0x0
 #define SYS_PORT_H_ODC          0x0
 #define SYS_PORT_H_CNPU         0x0
@@ -576,12 +567,6 @@ extern "C" {
 #define NET_PRES_NUM_INSTANCE 1
 #define NET_PRES_NUM_SOCKETS 10
 
-// *****************************************************************************
-/* BSP Configuration Options
-*/
-#define BSP_OSC_FREQUENCY 24000000
-
-
 
 
 // *****************************************************************************
@@ -591,6 +576,8 @@ extern "C" {
 // *****************************************************************************
 
 /*** Application Instance 0 Configuration ***/
+
+/*** Application Instance 1 Configuration ***/
 
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus

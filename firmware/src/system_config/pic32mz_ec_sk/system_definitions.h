@@ -78,6 +78,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "net/pres/net_pres_transportapi.h"
 #include "net/pres/net_pres_socketapi.h"
 #include "app.h"
+#include "switch_control.h"
 
 
 // DOM-IGNORE-BEGIN
