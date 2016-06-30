@@ -227,8 +227,8 @@ void APP_Tasks ( void )
     int                 countDiff;
     enum exosite_device_status status;
     int error;
-    char *vendor = "opentether";
-    char *model = "bcmwcd4";
+    char *vendor = "ta7lsaumvswz5mi";
+    char *model = "ta7lsaumvswz5mi";
     char tmp[256];
         
     /* Check the application's current state. */
