@@ -641,10 +641,6 @@
         <Path>Source Files/app</Path>
       </Template>
       <Template>
-        <Name>sensor.c</Name>
-        <Path>Source Files/app</Path>
-      </Template>
-      <Template>
         <Name>system_exceptions.c</Name>
         <Path>Source Files/app/system_config/pic32mz_ec_sk</Path>
         <Checksum>C111969CA43D6CEA1E9E33A6164E7AE0</Checksum>
@@ -658,10 +654,6 @@
         <Name>drv_spi_master_ebm_tasks.c</Name>
         <Path>Source Files/app/system_config/pic32mz_ec_sk/framework/driver/spi/dynamic</Path>
         <Checksum>4C2C868738FD74E2D6A3C8A8FD6B1381</Checksum>
-      </Template>
-      <Template>
-        <Name>display_ctrl.h</Name>
-        <Path>Header Files/app</Path>
       </Template>
       <Template>
         <Name>system_interrupt_a.S</Name>
@@ -680,7 +672,7 @@
       <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/pic32mz_ec_sk</Path>
-        <Checksum>890CD203F2AAE45689EE4CA5F1E28DEB</Checksum>
+        <Checksum>D8CB478F7B066F76E6F9D4A3159D43F1</Checksum>
       </Template>
       <Template>
         <Name>net_pres_enc_glue.h</Name>
@@ -690,7 +682,7 @@
       <Template>
         <Name>system_interrupt.c</Name>
         <Path>Source Files/app/system_config/pic32mz_ec_sk</Path>
-        <Checksum>58C277C93EBF8CBF6BE0E3A2690347AC</Checksum>
+        <Checksum>A40BD5A568480E82306644FB8ECEF5CE</Checksum>
       </Template>
       <Template>
         <Name>sys_clk_static.h</Name>
@@ -705,24 +697,16 @@
       <Template>
         <Name>system_init.c</Name>
         <Path>Source Files/app/system_config/pic32mz_ec_sk</Path>
-        <Checksum>71F06A4010207981CF16E99905B35B7E</Checksum>
-      </Template>
-      <Template>
-        <Name>sensor.h</Name>
-        <Path>Header Files/app</Path>
+        <Checksum>0A960579619F20FEF1B4342B49342940</Checksum>
       </Template>
       <Template>
         <Name>system_definitions.h</Name>
         <Path>Header Files/app/system_config/pic32mz_ec_sk</Path>
-        <Checksum>B0358CAD51B5321EEE3143AFB65EC6E9</Checksum>
+        <Checksum>E08BFEAD5A11E86DE2485580E8E0C854</Checksum>
       </Template>
       <Template>
         <Name>app.h</Name>
         <Path>Header Files/app</Path>
-      </Template>
-      <Template>
-        <Name>display_ctrl.c</Name>
-        <Path>Source Files/app</Path>
       </Template>
       <Template>
         <Name>FreeRTOSConfig.h</Name>
@@ -747,7 +731,7 @@
       <Template>
         <Name>system_tasks.c</Name>
         <Path>Source Files/app/system_config/pic32mz_ec_sk</Path>
-        <Checksum>2920589DEB3F3A1DAE405274466E6ECB</Checksum>
+        <Checksum>69C74808B531E3608F126A5ED41B820F</Checksum>
       </Template>
     </Templates>
     <CompilerItems>

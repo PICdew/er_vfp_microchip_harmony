@@ -55,8 +55,6 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "system_config.h"
 #include "system_definitions.h"
 #include "app.h"
-#include "display_ctrl.h"
-#include "sensor.h"
 
 
 // *****************************************************************************
@@ -74,8 +72,6 @@ void _SYS_COMMAND_Tasks(void);
 
 void _TCPIP_Tasks(void);
 static void _APP_Tasks(void);
-static void _DISPLAY_CTRL_Tasks(void);
-static void _SENSOR_Tasks(void);
 
 
 // *****************************************************************************
@@ -122,16 +118,6 @@ void SYS_Tasks ( void )
     xTaskCreate((TaskFunction_t) _APP_Tasks,
                 "APP Tasks",
                 2048, NULL, 2, NULL);
-
-    /* Create OS Thread for DISPLAY_CTRL Tasks. */
-    xTaskCreate((TaskFunction_t) _DISPLAY_CTRL_Tasks,
-                "DISPLAY_CTRL Tasks",
-                1024, NULL, 1, NULL);
-
-    /* Create OS Thread for SENSOR Tasks. */
-    xTaskCreate((TaskFunction_t) _SENSOR_Tasks,
-                "SENSOR Tasks",
-                1024, NULL, 1, NULL);
 
     /**************
      * Start RTOS * 
@@ -206,42 +192,6 @@ static void _APP_Tasks(void)
     while(1)
     {
         APP_Tasks();
-        vTaskDelay(1 / portTICK_RATE_MS);
-    }
-}
-
-
-/*******************************************************************************
-  Function:
-    void _DISPLAY_CTRL_Tasks ( void )
-
-  Summary:
-    Maintains state machine of DISPLAY_CTRL.
-*/
-
-static void _DISPLAY_CTRL_Tasks(void)
-{
-    while(1)
-    {
-        DISPLAY_CTRL_Tasks();
-        vTaskDelay(1 / portTICK_RATE_MS);
-    }
-}
-
-
-/*******************************************************************************
-  Function:
-    void _SENSOR_Tasks ( void )
-
-  Summary:
-    Maintains state machine of SENSOR.
-*/
-
-static void _SENSOR_Tasks(void)
-{
-    while(1)
-    {
-        SENSOR_Tasks();
         vTaskDelay(1 / portTICK_RATE_MS);
     }
 }
