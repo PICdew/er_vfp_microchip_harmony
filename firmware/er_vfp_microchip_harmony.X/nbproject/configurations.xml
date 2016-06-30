@@ -960,7 +960,7 @@
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="preprocessor-macros"
-                  value="DEBUG_EASDK;COMPILE_TIME_DEBUG_LEVEL=DEBUG_DEBUG;CONFIG_NETWORK_STACK=cfg_harmony;CONFIG_OS=cfg_freertos;CONFIG_SECURITY=cfg_cyassl;CONFIG_HAS_CONFIGURATOR_SERVER=0;HAVE_CONFIG_H"/>
+                  value="DEBUG_EASDK;COMPILE_TIME_DEBUG_LEVEL=DEBUG_DEBUG;CONFIG_NETWORK_STACK=cfg_harmony;CONFIG_OS=cfg_freertos;CONFIG_SECURITY=cfg_cyassl;CONFIG_HAS_CONFIGURATOR_SERVER=0;HAVE_CONFIG_H;NO_DISPLAY"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
         <property key="use-cci" value="false"/>
@@ -1063,7 +1063,6 @@
         <property key="ToolFirmwareFilePath"
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
-        <property key="firmware.download.all" value="false"/>
         <property key="memories.configurationmemory" value="true"/>
         <property key="memories.dataflash" value="true"/>
         <property key="memories.eeprom" value="true"/>
