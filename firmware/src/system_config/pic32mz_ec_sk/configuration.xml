@@ -147,6 +147,10 @@
         <Path>Source Files/framework/tcpip/stack</Path>
       </File>
       <File>
+        <Name>bsp_config.h</Name>
+        <Path>Header Files/bsp/pic32mz_ef_sk</Path>
+      </File>
+      <File>
         <Name>drv_ethphy.c</Name>
         <Path>Source Files/framework/driver/ethphy</Path>
       </File>
@@ -415,6 +419,10 @@
         <Path>Source Files/framework/driver/spi</Path>
       </File>
       <File>
+        <Name>bsp_sys_init.c</Name>
+        <Path>Source Files/bsp/pic32mz_ef_sk</Path>
+      </File>
+      <File>
         <Name>drv_tmr.c</Name>
         <Path>Source Files/framework/driver/tmr/src/dynamic</Path>
       </File>
@@ -659,7 +667,7 @@
       <Template>
         <Name>sys_ports_static.c</Name>
         <Path>Source Files/app/system_config/pic32mz_ec_sk/framework/system/ports/src</Path>
-        <Checksum>053261AA872CB63C8027976C3747FEE1</Checksum>
+        <Checksum>823854364FB1932E48A70573C406F427</Checksum>
       </Template>
       <Template>
         <Name>app.c</Name>
@@ -668,7 +676,7 @@
       <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/pic32mz_ec_sk</Path>
-        <Checksum>45047D4869C6F4F6D31888D7165860B8</Checksum>
+        <Checksum>1666396BE3D4D4BF561F0206D795BD37</Checksum>
       </Template>
       <Template>
         <Name>net_pres_enc_glue.h</Name>
@@ -693,7 +701,7 @@
       <Template>
         <Name>system_init.c</Name>
         <Path>Source Files/app/system_config/pic32mz_ec_sk</Path>
-        <Checksum>0CF6026436C140B1146945C0A1515ADF</Checksum>
+        <Checksum>2219D49419121A93C74D80D7DFD6E3FF</Checksum>
       </Template>
       <Template>
         <Name>system_definitions.h</Name>
@@ -741,6 +749,7 @@
         <Include value="../src/system_config/pic32mz_ec_sk"/>
       </C32-AS>
       <C32>
+        <Include value="../../../../bsp/pic32mz_ef_sk"/>
         <Include value="../../../../third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ"/>
         <Include value="../../../../third_party/rtos/FreeRTOS/Source/include"/>
         <Include value="../src/system_config/pic32mz_ec_sk"/>
