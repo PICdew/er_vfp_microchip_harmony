@@ -86,7 +86,7 @@ DRV_I2C_BUFFER_EVENT i2cOpStatus;
 
 static uint8_t numOfBytes;
 static uint8_t TXbuffer[20];
-static uint8_t RXbuffer[30];
+static volatile uint8_t RXbuffer[30];
 typedef int64_t BME280_S32_t;
 
 int Temperature;
@@ -195,9 +195,9 @@ static BME280_S32_t BME280_Compensate_T(BME280_S32_t adc_T) {
 /************************************************************************************************************/
    int64_t h1;
 
-int BME280_Compensate_H(void ) {
+int BME280_Compensate_H(int sen_hum ) {
   h1 = (t_fine - ((int64_t)76800));
-  h1 = (((((Humidity << 14) - ((( int64_t)dig_H4) << 20) - (((int64_t)dig_H5) * h1)) +
+  h1 = (((((sen_hum << 14) - ((( int64_t)dig_H4) << 20) - (((int64_t)dig_H5) * h1)) +
     ((int64_t)16384)) >> 15) * (((((((h1 * ((int64_t)dig_H6)) >> 10) * (((h1 *
     ((int64_t)dig_H3)) >> 11) + ((int64_t)32768))) >> 10) + ((int64_t)2097152)) *
     ((int64_t)dig_H2) + 8192) >> 14));
@@ -226,6 +226,8 @@ int BME280_Compensate_H(void ) {
 void SENSOR_Tasks(void)
 {
     static uint32_t Timer;
+    volatile int tmp1;
+    volatile int tmp2;
 
     /* Check the application's current state. */
     switch (sensorData.state) {
@@ -456,10 +458,11 @@ void SENSOR_Tasks(void)
             Temperature |= (unsigned int)RXbuffer[3] << 12;
             Temperature = BME280_Compensate_T((BME280_S32_t)Temperature);
 
-            Humidity = (unsigned int)RXbuffer[6] << 8;
-            Humidity |= (unsigned int)RXbuffer[7];
-            Humidity = BME280_Compensate_H();
-            Humidity = Humidity / 1024;
+            tmp1 = RXbuffer[6] << 8;
+            tmp2 = RXbuffer[7];
+            Humidity = tmp1 + tmp2;
+            //Humidity = BME280_Compensate_H(tmp2);
+            //Humidity = Humidity / 1024;
 
             system_mutex_unlock(sensorData.sensore_update_mutex);
 
