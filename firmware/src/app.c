@@ -109,8 +109,7 @@ static volatile unsigned char SDK_HEAP[65536];
 */
 static struct exosite_class *exo;
 
-extern int getTemperature(void);
-extern int getHumidity(void);
+int gCounter;
 
 /**
  *  This function is called when the read operation is finished.
@@ -124,15 +123,10 @@ static void on_read(int status, const char *alias, const char *value)
 {
     SYS_CONSOLE_PRINT("Read \"%s\": %s\r\n", alias, (status == ERR_SUCCESS) ? value : "failed");
 
-    if (status == ERR_SUCCESS) {
-        if(!strcmp("display", alias)) {
-            display_print_remote_msg(value);
-            appData.remote_msg_initialized = INITIALIZED;
-        }
-    } else {
-        /* In case of error, the reading will be repeated */
-        appData.remote_msg_initialized = NOT_INITIALIZED;
-    }
+    if(!strcmp("leds", alias))
+        appData.leds_initialized = (status == ERR_SUCCESS) ? INITIALIZED : NOT_INITIALIZED;
+    if(!strcmp("count", alias))
+        appData.counter_initialized = (status == ERR_SUCCESS) ? INITIALIZED : NOT_INITIALIZED;;
 }
 
 /**
@@ -158,12 +152,11 @@ static void on_write(int status, const char *alias)
  */
 static void on_change(int status, const char *alias, const char *value)
 {
-    ASSERT(!strcmp("display", alias));
+    ASSERT(!strcmp("leds", alias));
     
     if (status == ERR_SUCCESS) {
-        appData.remote_msg_initialized = INITIALIZED;
+        appData.leds_initialized = INITIALIZED;
         printf("Value changed on server \"%s\" to %s\n", alias, value);
-        display_print_remote_msg(value);
     }
 }
 
@@ -185,7 +178,8 @@ void APP_Initialize ( void )
 {
     int error;
     appData.state = APP_STATE_INIT;
-    appData.remote_msg_initialized = NOT_INITIALIZED;
+    appData.leds_initialized = NOT_INITIALIZED;
+    appData.counter_initialized = NOT_INITIALIZED;
     
     /** Platform initialization */
     error = platform_init();
@@ -289,25 +283,10 @@ void APP_Tasks ( void )
                         SYS_CONSOLE_PRINT(" MAC Address: %x.%x.%x.%x.%x.%x \r\n",pAdd->v[0], pAdd->v[1], pAdd->v[2], pAdd->v[3], pAdd->v[4], pAdd->v[5]);
                         SYS_CONSOLE_PRINT(" IP Address:  %d.%d.%d.%d \r\n", ipAddr.v[0], ipAddr.v[1], ipAddr.v[2], ipAddr.v[3]);
                         SYS_CONSOLE_PRINT("---------------------------------------------\r\n");
-                        appData.state = APP_DISPLAY_INIT;
+                        appData.state = APP_ER_SDK_INIT;
                     }
                 }
             }
-            break;
-
-        case APP_DISPLAY_INIT:
-
-            if(!is_display_ready())
-                break;
-
-            SYS_CONSOLE_MESSAGE(" Display initialized\r\n");
-
-            if (display_print_sn()!= ERR_SUCCESS) {
-                appData.state = APP_PLATFORM_ERROR;
-                break;
-            }
-
-            appData.state = APP_ER_SDK_INIT;
             break;
 
         case APP_ER_SDK_INIT:
@@ -341,30 +320,27 @@ void APP_Tasks ( void )
         case APP_CREATE_SUBSCRIPTIONS:
 
             if(exosite_subscribe(exo, "display", 0, on_change) == ERR_SUCCESS) {
-                appData.remote_msg_initialized = IN_PROGRESS;
-                exosite_read(exo, "display", on_read);
+                appData.leds_initialized = IN_PROGRESS;
+                exosite_read(exo, "leds", on_read);
                 appData.state = APP_APPLICATION;
             }
             break;
 
         case APP_APPLICATION:
 
-            if (appData.remote_msg_initialized == NOT_INITIALIZED) {
-                appData.remote_msg_initialized = IN_PROGRESS;
-                exosite_read(exo, "display", on_read);
+            if (appData.leds_initialized == NOT_INITIALIZED) {
+                appData.leds_initialized = IN_PROGRESS;
+                exosite_read(exo, "leds", on_read);
+            }
+            if (appData.counter_initialized == NOT_INITIALIZED) {
+                appData.counter_initialized = IN_PROGRESS;
+                exosite_read(exo, "count", on_read);
             }
                     
-            /** Update "temperature" data source */
-            sensor_val = getTemperature();
-            sprintf(str, "%d.%01dC", (sensor_val/100),(sensor_val%100)/10);
-            SYS_CONSOLE_PRINT("Temperature: %s\r\n", str);
-            exosite_write(exo, "temperature", str, on_write);
-
-            /** Update "humidity" data source */
-            sensor_val = getHumidity();
-            sprintf(str, "%d%%", sensor_val);
-            SYS_CONSOLE_PRINT("Humidity: %s\r\n", str);
-            exosite_write(exo, "humidity", str, on_write);
+            /** Update "count" data source */
+            sprintf(str, "%d", gCounter);
+            SYS_CONSOLE_PRINT("Counter: %s\r\n", str);
+            exosite_write(exo, "count", str, on_write);
 
             exosite_delay_and_poll(exo, 2000);
 

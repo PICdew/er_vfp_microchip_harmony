@@ -111,7 +111,7 @@ typedef struct
     /* The application's current state */
     APP_STATES state;
 
-    enum { NOT_INITIALIZED = 0, IN_PROGRESS, INITIALIZED } remote_msg_initialized;
+    enum { NOT_INITIALIZED = 0, IN_PROGRESS, INITIALIZED } leds_initialized, counter_initialized;
 
 } APP_DATA;
 
