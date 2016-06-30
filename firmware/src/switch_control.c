@@ -53,6 +53,13 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // *****************************************************************************
 // *****************************************************************************
 
+#include "system_config.h"
+#include "system_definitions.h"
+#include <system_utils.h>
+#include <lib/type.h>
+#include <lib/error.h>
+#include <lib/debug.h>
+#include <exosite_api.h>
 #include "switch_control.h"
 
 // *****************************************************************************
@@ -114,13 +121,18 @@ SWITCH_CONTROL_DATA switch_controlData;
 
 void SWITCH_CONTROL_Initialize ( void )
 {
+    int32_t status;
+            
     /* Place the App state machine in its initial state. */
     switch_controlData.state = SWITCH_CONTROL_STATE_INIT;
-
+    switch_controlData.pressCounter = 0;
+    switch_controlData.swDownPressed = FALSE;
+    switch_controlData.swUpPressed = FALSE;
     
-    /* TODO: Initialize your application's state machine and other
-     * parameters.
-     */
+    status = system_mutex_create(&switch_controlData.lock_mutex);
+    if (status != ERR_SUCCESS) {
+        error_log(DEBUG_PLATFORM, ("Mutex can not be created\n"), status);
+    }
 }
 
 
@@ -134,7 +146,7 @@ void SWITCH_CONTROL_Initialize ( void )
 
 void SWITCH_CONTROL_Tasks ( void )
 {
-
+    BOOL swUp, swDown;
     /* Check the application's current state. */
     switch ( switch_controlData.state )
     {
@@ -154,7 +166,27 @@ void SWITCH_CONTROL_Tasks ( void )
 
         case SWITCH_CONTROL_STATE_SERVICE_TASKS:
         {
-        
+            swUp = !BSP_SwitchStateGet(BSP_SWITCH_1);
+            swDown = !BSP_SwitchStateGet(BSP_SWITCH_2);
+            
+            if(swUp != switch_controlData.swUpPressed) {
+                if(swUp) {
+                    system_mutex_lock(switch_controlData.lock_mutex);
+                    switch_controlData.pressCounter++;
+                    system_mutex_unlock(switch_controlData.lock_mutex);
+                }
+                SYS_CONSOLE_PRINT("Button up %s\r\n", swUp ? "Pressed" : "Released");
+                switch_controlData.swUpPressed = !switch_controlData.swUpPressed;
+            }
+            if(swDown != switch_controlData.swDownPressed) {
+                if(swDown) {
+                    system_mutex_lock(switch_controlData.lock_mutex);
+                    switch_controlData.pressCounter--;
+                    system_mutex_unlock(switch_controlData.lock_mutex);
+                }
+                SYS_CONSOLE_PRINT("Button down %s\r\n", swDown ? "Pressed" : "Released");
+                switch_controlData.swDownPressed = !switch_controlData.swDownPressed;
+            }
             break;
         }
 
@@ -170,7 +202,16 @@ void SWITCH_CONTROL_Tasks ( void )
     }
 }
 
- 
+int get_and_clear_press_counter(void) {
+    
+    int ret;
+    system_mutex_lock(switch_controlData.lock_mutex);
+    ret = switch_controlData.pressCounter;
+    switch_controlData.pressCounter = 0;
+    system_mutex_unlock(switch_controlData.lock_mutex);
+    
+    return ret;
+} 
 
 /*******************************************************************************
  End of File

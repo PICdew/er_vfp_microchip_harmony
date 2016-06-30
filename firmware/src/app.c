@@ -212,8 +212,7 @@ void APP_Tasks ( void )
     TCPIP_MAC_ADDR*     pAdd;
     int                 i, nNets;
     char                str[32];
-    int                 sensor_val;
-
+    int                 countDiff;
     enum exosite_device_status status;
     int error;
     char *vendor = "opentether";
@@ -338,9 +337,13 @@ void APP_Tasks ( void )
             }
                     
             /** Update "count" data source */
-            sprintf(str, "%d", gCounter);
-            SYS_CONSOLE_PRINT("Counter: %s\r\n", str);
-            exosite_write(exo, "count", str, on_write);
+            countDiff = get_and_clear_press_counter();
+            if(countDiff) {
+                gCounter += countDiff;
+                sprintf(str, "%d", gCounter);
+                SYS_CONSOLE_PRINT("Counter: %s\r\n", str);
+                exosite_write(exo, "count", str, on_write);
+            }
 
             exosite_delay_and_poll(exo, 2000);
 

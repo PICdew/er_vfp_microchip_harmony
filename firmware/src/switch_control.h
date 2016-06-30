@@ -56,8 +56,10 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdlib.h>
+#include <lib/type.h>
 #include "system_config.h"
 #include "system_definitions.h"
+#include <porting/thread_port.h>
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -114,7 +116,13 @@ typedef struct
     SWITCH_CONTROL_STATES state;
 
     /* TODO: Define any additional data used by the application. */
-
+    int pressCounter;
+    
+    system_mutex_t lock_mutex;
+    
+    BOOL swUpPressed;
+    BOOL swDownPressed;
+            
 } SWITCH_CONTROL_DATA;
 
 
