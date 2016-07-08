@@ -154,7 +154,6 @@
         <logicalFolder name="f5" displayName="tcpip" projectFiles="true">
           <logicalFolder name="f2" displayName="common" projectFiles="true">
             <itemPath>../../../../framework/tcpip/src/common/helpers.h</itemPath>
-            <itemPath>../../../../framework/tcpip/src/common/lfsr.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f1" displayName="stack" projectFiles="true">
             <itemPath>../../../../framework/tcpip/src/tcp_private.h</itemPath>
@@ -585,7 +584,6 @@
         <logicalFolder name="f6" displayName="tcpip" projectFiles="true">
           <logicalFolder name="f2" displayName="common" projectFiles="true">
             <itemPath>../../../../framework/tcpip/src/common/helpers.c</itemPath>
-            <itemPath>../../../../framework/tcpip/src/common/lfsr.c</itemPath>
           </logicalFolder>
           <logicalFolder name="f1" displayName="stack" projectFiles="true">
             <itemPath>../../../../framework/tcpip/src/tcp.c</itemPath>
