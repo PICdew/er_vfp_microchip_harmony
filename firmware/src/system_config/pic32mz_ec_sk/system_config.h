@@ -501,6 +501,7 @@ extern "C" {
 #define TCPIP_EMAC_RX_BUFF_SIZE		    			1536
 #define TCPIP_EMAC_RX_MAX_FRAME		    			1536
 #define TCPIP_EMAC_RX_FRAGMENTS		    			1
+#define TCPIP_EMAC_RX_FILTERS                       (TCPIP_MAC_RX_FILTER_TYPE_DEFAULT)
 #define TCPIP_EMAC_ETH_OPEN_FLAGS       			\
                                                     TCPIP_ETH_OPEN_AUTO |\
                                                     TCPIP_ETH_OPEN_FDUPLEX |\
