@@ -160,15 +160,18 @@ static void on_write(int status, const char *alias)
  */
 static void on_change(int status, const char *alias, const char *value)
 {
-    int val = atoi(value);
-    ASSERT(!strcmp("leds", alias));
-    
     if (status == ERR_SUCCESS) {
-        appData.leds_initialized = INITIALIZED;
-        printf("Value changed on server \"%s\" to %s\n", alias, value);
-        BSP_LEDStateSet(BSP_LED_1, (val & 1) ? BSP_LED_STATE_ON : BSP_LED_STATE_OFF);
-        BSP_LEDStateSet(BSP_LED_2, (val & 2) ? BSP_LED_STATE_ON : BSP_LED_STATE_OFF);
-        BSP_LEDStateSet(BSP_LED_3, (val & 4) ? BSP_LED_STATE_ON : BSP_LED_STATE_OFF);
+        if (!strcmp("leds", alias)) {
+            appData.leds_initialized = INITIALIZED;
+
+            int val = atoi(value);
+            printf("Value changed on server \"%s\" to %s\n", alias, value);
+            BSP_LEDStateSet(BSP_LED_1, (val & 1) ? BSP_LED_STATE_ON : BSP_LED_STATE_OFF);
+            BSP_LEDStateSet(BSP_LED_2, (val & 2) ? BSP_LED_STATE_ON : BSP_LED_STATE_OFF);
+            BSP_LEDStateSet(BSP_LED_3, (val & 4) ? BSP_LED_STATE_ON : BSP_LED_STATE_OFF);
+        } else {
+            printf("Value changed on server for unknown item \"%s\", with value %s\n", alias, value);
+        }
     }
 }
 
