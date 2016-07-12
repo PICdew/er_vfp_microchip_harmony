@@ -318,15 +318,18 @@ void APP_Tasks ( void )
             break;
 
         case APP_WAIT_FOR_ACTIVATION:
-            
-            SYS_CONSOLE_MESSAGE(".");
-            
             /** Wait until the activation is finished */
             status = exosite_get_status(exo);
-            exosite_delay_and_poll(exo, 200);
+            exosite_delay_and_poll(exo, 1000);
             if (status == DEVICE_STATUS_ACTIVATED) {
                 SYS_CONSOLE_MESSAGE("The device is ACTIVATED!\r\n");
                 appData.state = APP_CREATE_SUBSCRIPTIONS;
+            } else if (status == DEVICE_STATUS_NOT_ACTIVATED) {
+                SYS_CONSOLE_PRINT("The device is not activated. Ensure serial "
+                                  "number '%02x%02x%02x%02x%02x%02x' is "
+                                  "enabled for activation.\r\n",
+                                  pAdd->v[0], pAdd->v[1], pAdd->v[2],
+                                  pAdd->v[3], pAdd->v[4], pAdd->v[5]);
             }
 
             break;
