@@ -294,7 +294,7 @@ void APP_Tasks ( void )
                     {
                         SYS_CONSOLE_PRINT("---------------------------------------------\r\n");
                         SYS_CONSOLE_PRINT(" If:          %s\r\n", TCPIP_STACK_NetNameGet(netH));
-                        SYS_CONSOLE_PRINT(" MAC Address: %x.%x.%x.%x.%x.%x \r\n",pAdd->v[0], pAdd->v[1], pAdd->v[2], pAdd->v[3], pAdd->v[4], pAdd->v[5]);
+                        SYS_CONSOLE_PRINT(" MAC Address: %02x.%02x.%02x.%02x.%02x.%02x \r\n",pAdd->v[0], pAdd->v[1], pAdd->v[2], pAdd->v[3], pAdd->v[4], pAdd->v[5]);
                         SYS_CONSOLE_PRINT(" IP Address:  %d.%d.%d.%d \r\n", ipAddr.v[0], ipAddr.v[1], ipAddr.v[2], ipAddr.v[3]);
                         SYS_CONSOLE_PRINT("---------------------------------------------\r\n");
                         appData.state = APP_ER_SDK_INIT;
