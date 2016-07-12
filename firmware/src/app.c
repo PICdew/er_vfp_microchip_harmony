@@ -158,12 +158,16 @@ static void on_write(int status, const char *alias)
  */
 static void on_change(int status, const char *alias, const char *value)
 {
-    ASSERT(!strcmp("display", alias));
-    
     if (status == ERR_SUCCESS) {
-        appData.remote_msg_initialized = INITIALIZED;
-        printf("Value changed on server \"%s\" to %s\n", alias, value);
+        if (!strcmp("display", alias)) {
+            appData.remote_msg_initialized = INITIALIZED;
+
+            int val = atoi(value);
+            printf("Value changed on server \"%s\" to %s\n", alias, value);
         display_print_remote_msg(value);
+        } else {
+            printf("Value changed on server for unknown item \"%s\", with value %s\n", alias, value);
+        }
     }
 }
 
