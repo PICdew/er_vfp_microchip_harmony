@@ -261,6 +261,8 @@ void APP_Tasks ( void )
                         SYS_CONSOLE_PRINT("    Interface %s on host %s - NBNS disabled\r\n", netName, netBiosName);
                     #endif  // defined(TCPIP_STACK_USE_NBNS)
                 }
+
+                SYS_CONSOLE_MESSAGE(" APP: Waiting for IP address...\r\n");
                 appData.state = APP_TCPIP_WAIT_FOR_IP;
 
             }
