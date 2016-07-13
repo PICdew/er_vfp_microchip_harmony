@@ -121,19 +121,18 @@ int gCounter;
  */
 static void on_read(int status, const char *alias, const char *value)
 {
-    int val;
-    SYS_CONSOLE_PRINT("Read \"%s\": %s\r\n", alias, (status == ERR_SUCCESS) ? value : "failed");
-    
-    if(!strcmp("leds", alias)) {
-        val = atoi(value);
-        BSP_LEDStateSet(BSP_LED_1, (val & 1) ? BSP_LED_STATE_ON : BSP_LED_STATE_OFF);
-        BSP_LEDStateSet(BSP_LED_2, (val & 2) ? BSP_LED_STATE_ON : BSP_LED_STATE_OFF);
-        BSP_LEDStateSet(BSP_LED_3, (val & 4) ? BSP_LED_STATE_ON : BSP_LED_STATE_OFF);
-        appData.leds_initialized = (status == ERR_SUCCESS) ? INITIALIZED : NOT_INITIALIZED;
-    }
-    if(!strcmp("count", alias)) {
-        gCounter = atoi(value);
-        appData.counter_initialized = (status == ERR_SUCCESS) ? INITIALIZED : NOT_INITIALIZED;
+    if (status == ERR_SUCCESS) {
+        printf("Value read from server \"%s\" to %s\n", alias, value);
+        if(!strcmp("leds", alias)) {
+            int val = atoi(value);
+            BSP_LEDStateSet(BSP_LED_1, (val & 1) ? BSP_LED_STATE_ON : BSP_LED_STATE_OFF);
+            BSP_LEDStateSet(BSP_LED_2, (val & 2) ? BSP_LED_STATE_ON : BSP_LED_STATE_OFF);
+            BSP_LEDStateSet(BSP_LED_3, (val & 4) ? BSP_LED_STATE_ON : BSP_LED_STATE_OFF);
+            appData.leds_initialized = (status == ERR_SUCCESS) ? INITIALIZED : NOT_INITIALIZED;
+        } else if(!strcmp("count", alias)) {
+            gCounter = atoi(value);
+            appData.counter_initialized = (status == ERR_SUCCESS) ? INITIALIZED : NOT_INITIALIZED;
+        }
     }
 }
 
@@ -161,16 +160,14 @@ static void on_write(int status, const char *alias)
 static void on_change(int status, const char *alias, const char *value)
 {
     if (status == ERR_SUCCESS) {
+        printf("Value changed on server \"%s\" to %s\n", alias, value);
         if (!strcmp("leds", alias)) {
             appData.leds_initialized = INITIALIZED;
 
             int val = atoi(value);
-            printf("Value changed on server \"%s\" to %s\n", alias, value);
             BSP_LEDStateSet(BSP_LED_1, (val & 1) ? BSP_LED_STATE_ON : BSP_LED_STATE_OFF);
             BSP_LEDStateSet(BSP_LED_2, (val & 2) ? BSP_LED_STATE_ON : BSP_LED_STATE_OFF);
             BSP_LEDStateSet(BSP_LED_3, (val & 4) ? BSP_LED_STATE_ON : BSP_LED_STATE_OFF);
-        } else {
-            printf("Value changed on server for unknown item \"%s\", with value %s\n", alias, value);
         }
     }
 }
