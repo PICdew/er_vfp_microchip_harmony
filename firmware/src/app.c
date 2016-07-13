@@ -370,7 +370,7 @@ void APP_Tasks ( void )
             SYS_CONSOLE_PRINT("Humidity: %s\r\n", str);
             exosite_write(exo, "humidity", str, on_write);
 
-            exosite_delay_and_poll(exo, 2000);
+            exosite_delay_and_poll(exo, 100);
 
             break;
 
