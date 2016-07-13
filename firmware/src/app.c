@@ -123,11 +123,10 @@ extern int getHumidity(void);
 static void on_read(int status, const char *alias, const char *value)
 {
     if (status == ERR_SUCCESS) {
+        printf("Value read from server \"%s\" to %s\n", alias, value);
         if(!strcmp("display", alias)) {
             display_print_remote_msg(value);
             appData.remote_msg_initialized = INITIALIZED;
-        } else {
-            printf("Value read from server for unknown item \"%s\", with value %s\n", alias, value);
         }
     } else {
         /* In case of error, the reading will be repeated */
@@ -159,14 +158,12 @@ static void on_write(int status, const char *alias)
 static void on_change(int status, const char *alias, const char *value)
 {
     if (status == ERR_SUCCESS) {
+        printf("Value changed on server \"%s\" to %s\n", alias, value);
         if (!strcmp("display", alias)) {
             appData.remote_msg_initialized = INITIALIZED;
 
             int val = atoi(value);
-            printf("Value changed on server \"%s\" to %s\n", alias, value);
             display_print_remote_msg(value);
-        } else {
-            printf("Value changed on server for unknown item \"%s\", with value %s\n", alias, value);
         }
     }
 }
