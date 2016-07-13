@@ -251,7 +251,6 @@ void APP_Tasks ( void )
                 nNets = TCPIP_STACK_NumberOfNetworksGet();
                 for(i = 0; i < nNets; i++)
                 {
-
                     netH = TCPIP_STACK_IndexToNet(i);
                     netName = TCPIP_STACK_NetNameGet(netH);
                     netBiosName = TCPIP_STACK_NetBIOSName(netH);
@@ -261,7 +260,6 @@ void APP_Tasks ( void )
                     #else
                         SYS_CONSOLE_PRINT("    Interface %s on host %s - NBNS disabled\r\n", netName, netBiosName);
                     #endif  // defined(TCPIP_STACK_USE_NBNS)
-
                 }
                 appData.state = APP_TCPIP_WAIT_FOR_IP;
 
@@ -357,7 +355,7 @@ void APP_Tasks ( void )
                 appData.remote_msg_initialized = IN_PROGRESS;
                 exosite_read(exo, "display", on_read);
             }
-                    
+
             /** Update "temperature" data source */
             sensor_val = getTemperature();
             sprintf(str, "%d.%01dC", (sensor_val/100),(sensor_val%100)/10);
