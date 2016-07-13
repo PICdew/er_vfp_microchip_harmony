@@ -362,7 +362,7 @@ void APP_Tasks ( void )
                 exosite_write(exo, "count", str, on_write);
             }
 
-            exosite_delay_and_poll(exo, 2000);
+            exosite_delay_and_poll(exo, 100);
 
             break;
 
