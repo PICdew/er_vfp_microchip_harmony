@@ -267,6 +267,8 @@ void APP_Tasks ( void )
                     #endif  // defined(TCPIP_STACK_USE_NBNS)
 
                 }
+
+                SYS_CONSOLE_MESSAGE(" APP: Waiting for IP address...\r\n");
                 appData.state = APP_TCPIP_WAIT_FOR_IP;
 
             }
