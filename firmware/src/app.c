@@ -353,10 +353,13 @@ void APP_Tasks ( void )
                                   pAdd->v[3], pAdd->v[4], pAdd->v[5]);
             }
 
+            /* Read if subscribe failed */
             if (appData.leds_initialized == NOT_INITIALIZED) {
                 appData.leds_initialized = IN_PROGRESS;
                 exosite_read(exo, "leds", on_read);
             }
+
+            /* Read initial state of count */
             if (appData.counter_initialized == NOT_INITIALIZED) {
                 appData.counter_initialized = IN_PROGRESS;
                 exosite_read(exo, "count", on_read);
