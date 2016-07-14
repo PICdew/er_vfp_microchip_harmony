@@ -956,7 +956,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../../../../framework;../src/system_config/basic_demo/framework;../../er_sdk/include;../../er_sdk/src/include;../../er_sdk/src/include/config;../../er_sdk/porting/system/FreeRTOS;../../er_sdk;../../er_plat_microchip_pic32mzecsk;../../er_sdk/third_party/cyassl;../src/system_config/basic_demo;../../../../bsp/pic32mz_ef_sk;../../../../third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../../../../third_party/rtos/FreeRTOS/Source/include"/>
+                  value="../src;../src/pic32mz_ec_sk;../../../../framework;../src/system_config/pic32mz_ec_sk/framework;../../er_sdk/include;../../er_sdk/src/include;../../er_sdk/src/include/config;../../er_sdk/porting/system/FreeRTOS;../../er_sdk;../../er_plat_microchip_pic32mzecsk;../../er_sdk/third_party/cyassl;../src/system_config/pic32mz_ec_sk;../../../../bsp/pic32mz_ef_sk;../../../../third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../../../../third_party/rtos/FreeRTOS/Source/include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
