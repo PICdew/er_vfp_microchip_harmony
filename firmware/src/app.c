@@ -110,6 +110,7 @@ static volatile unsigned char SDK_HEAP[65536];
 static struct exosite_class *exo;
 
 int gCounter;
+sys_time_t lastTime = 0;
 
 /**
  *  This function is called when the read operation is finished.
@@ -343,6 +344,14 @@ void APP_Tasks ( void )
             break;
 
         case APP_APPLICATION:
+            /* Print Serial Number */
+            if (lastTime < system_get_time() - 5000) {
+                lastTime = system_get_time();
+                SYS_CONSOLE_PRINT("Device serial number is: "
+                                  "'%02x%02x%02x%02x%02x%02x'\r\n",
+                                  pAdd->v[0], pAdd->v[1], pAdd->v[2],
+                                  pAdd->v[3], pAdd->v[4], pAdd->v[5]);
+            }
 
             if (appData.leds_initialized == NOT_INITIALIZED) {
                 appData.leds_initialized = IN_PROGRESS;
