@@ -727,7 +727,13 @@ void SYS_Initialize ( void* data )
 
     /* Initialize the Application */
     APP_Initialize();
+
+#ifdef NO_DISPLAY
     SWITCH_CONTROL_Initialize();
+#else
+    DISPLAY_CTRL_Initialize();
+    SENSOR_Initialize();
+#endif
 }
 
 

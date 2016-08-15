@@ -73,7 +73,14 @@ void _SYS_COMMAND_Tasks(void);
 
 void _TCPIP_Tasks(void);
 static void _APP_Tasks(void);
+
+#ifdef NO_DISPLAY
 static void _SWITCH_CONTROL_Tasks(void);
+#else
+static void _DISPLAY_CTRL_Tasks(void);
+static void _SENSOR_Tasks(void);
+#endif
+
 
 
 // *****************************************************************************
@@ -121,10 +128,23 @@ void SYS_Tasks ( void )
                 "APP Tasks",
                 2048, NULL, 2, NULL);
 
+#ifdef NO_DISPLAY
+
     /* Create OS Thread for SWITCH_CONTROL Tasks. */
     xTaskCreate((TaskFunction_t) _SWITCH_CONTROL_Tasks,
                 "SWITCH_CONTROL Tasks",
                 1024, NULL, 1, NULL);
+#else
+    /* Create OS Thread for DISPLAY_CTRL Tasks. */
+    xTaskCreate((TaskFunction_t) _DISPLAY_CTRL_Tasks,
+                "DISPLAY_CTRL Tasks",
+                1024, NULL, 1, NULL);
+
+    /* Create OS Thread for SENSOR Tasks. */
+    xTaskCreate((TaskFunction_t) _SENSOR_Tasks,
+                "SENSOR Tasks",
+                1024, NULL, 1, NULL);
+#endif
 
     /**************
      * Start RTOS * 
@@ -221,6 +241,39 @@ static void _SWITCH_CONTROL_Tasks(void)
     }
 }
 
+ /*******************************************************************************
+   Function:
+-    void _DISPLAY_CTRL_Tasks ( void )
+-
+-  Summary:
+-    Maintains state machine of DISPLAY_CTRL.
+-*/
+
+static void _DISPLAY_CTRL_Tasks(void)
+{
+    while(1)
+    {
+        DISPLAY_CTRL_Tasks();
+        vTaskDelay(1 / portTICK_RATE_MS);
+    }
+}
+
+ /*******************************************************************************
+   Function:
+-    void _SENSOR_Tasks ( void )
+-
+-  Summary:
+-    Maintains state machine of SENSOR.
+-*/
+
+static void _SENSOR_Tasks(void)
+{
+    while(1)
+    {
+        SENSOR_Tasks();
+        vTaskDelay(1 / portTICK_RATE_MS);
+    }
+}
 
 /*******************************************************************************
  End of File
